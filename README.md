@@ -104,22 +104,6 @@ pip install -r requirements.txt
 # then:
 jupyter notebook flight_delay_analysis.ipynb
 ```
-
----
-
-## Team
-
-| Name | Mat. Nr. |
-|---|---|
-| John Gomez | 823289 |
-| Atharva Satam | 855204 |
-| Prathamesh Patil | 838598 |
-| Nikhilvarma Kandula | 839606 |
-
-**Module:** Area of Application: Business Analytics  
-**Supervisor:** Prof. Dr. Stephan Hausberg  
-**Program:** M.Sc. Big Data & Business Analytics — FOM Hochschule Essen, Summer Semester 2026
-
 ---
 
 ## References
