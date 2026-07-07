@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "U.S. Flight Delay Analysis (2019-2023)"
+authors:
+  - family-names: Kandula
+    given-names: Nikhilvarma
+    email: kandulanikhilvarma@gmail.com
+    website: "https://kandula.studio"
+type: software
+url: "https://github.com/kandulanikhilvarma/flight-delay-analysis"
+repository-code: "https://github.com/kandulanikhilvarma/flight-delay-analysis"
+license: MIT
+keywords:
+  - aviation
+  - flight-delays
+  - data-analysis
+  - python
