@@ -44,12 +44,12 @@ The CSV is not committed to this repo (614 MB). Download it from Kaggle and plac
 
 ```mermaid
 flowchart LR
-    A["Kaggle CSV<br/>3M flights · 32 cols"] --> B["Clean<br/>drop cancelled / diverted<br/>label delay &gt; 15 min"]
+    A["Kaggle CSV<br/>3M flights · 32 cols"] --> B["Clean<br/>drop cancelled / diverted<br/>label delay over 15 min"]
     B --> C["Feature build<br/>month · day · hour · airline · distance"]
-    C --> D["Temporal & cause analysis"]
-    C --> E["Airport & correlation analysis"]
+    C --> D["Temporal and cause analysis"]
+    C --> E["Airport and correlation analysis"]
     C --> F["Classification<br/>Logistic Regression · Decision Tree<br/>80 / 20 split"]
-    D --> G["Figures & findings"]
+    D --> G["Figures and findings"]
     E --> G
     F --> G
 ```
