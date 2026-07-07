@@ -95,8 +95,8 @@ The CSV is not committed to this repo (614 MB). Download it from Kaggle and plac
 ## Reproduce
 
 ```bash
-git clone https://github.com/nikhilvarmakandula/ba-flight-delay-analysis
-cd ba-flight-delay-analysis
+git clone https://github.com/kandulanikhilvarma/flight-delay-analysis
+cd flight-delay-analysis
 
 pip install -r requirements.txt
 
@@ -104,6 +104,18 @@ pip install -r requirements.txt
 # then:
 jupyter notebook flight_delay_analysis.ipynb
 ```
+---
+
+## Data & Attribution
+
+The underlying on-time performance data is published by the U.S. **Bureau of
+Transportation Statistics** (U.S. Department of Transportation) and, as a work of
+the U.S. federal government, is in the **public domain**. The packaged 3M-row
+sample used here was redistributed on Kaggle by *patrickzel*.
+
+Analysis code and figures in this repository are released under the MIT License
+(see [LICENSE](LICENSE)); the source data remains under its original terms.
+
 ---
 
 ## References
