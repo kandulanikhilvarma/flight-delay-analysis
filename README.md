@@ -40,6 +40,24 @@ The CSV is not committed to this repo (614 MB). Download it from Kaggle and plac
 
 ---
 
+## Architecture
+
+```mermaid
+flowchart LR
+    A["Kaggle CSV<br/>3M flights · 32 cols"] --> B["Clean<br/>drop cancelled / diverted<br/>label delay &gt; 15 min"]
+    B --> C["Feature build<br/>month · day · hour · airline · distance"]
+    C --> D["Temporal & cause analysis"]
+    C --> E["Airport & correlation analysis"]
+    C --> F["Classification<br/>Logistic Regression · Decision Tree<br/>80 / 20 split"]
+    D --> G["Figures & findings"]
+    E --> G
+    F --> G
+```
+
+- **Clean** — the 3M-row sample is stripped of cancelled/diverted flights, with a binary label at the 15-minute threshold.
+- **Analyse** — year/season/hour trends, delay-cause breakdown, and the 20 most-delayed airports.
+- **Model** — class-weighted Logistic Regression and Decision Tree on an 80/20 split.
+
 ## Methods
 
 - **Data cleaning:** removed cancelled and diverted flights; binary delay label at >15 min threshold
