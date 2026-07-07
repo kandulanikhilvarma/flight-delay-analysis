@@ -2,7 +2,7 @@
 
 Predictive analytics on 3 million BTS flight records to identify what drives U.S. domestic delays and whether delay likelihood can be predicted from pre-flight schedule data alone.
 
-![Python](https://img.shields.io/badge/Python-3.10-blue) ![Platform](https://img.shields.io/badge/Platform-Kaggle%20%7C%20Local-lightgrey) ![License](https://img.shields.io/badge/License-Academic-green)
+![Python](https://img.shields.io/badge/Python-3.10-blue) ![Platform](https://img.shields.io/badge/Platform-Kaggle%20%7C%20Local-lightgrey) [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ---
 
@@ -39,6 +39,24 @@ Predictive analytics on 3 million BTS flight records to identify what drives U.S
 The CSV is not committed to this repo (614 MB). Download it from Kaggle and place it in `data/`.
 
 ---
+
+## Architecture
+
+```mermaid
+flowchart LR
+    A["Kaggle CSV<br/>3M flights · 32 cols"] --> B["Clean<br/>drop cancelled / diverted<br/>label delay &gt; 15 min"]
+    B --> C["Feature build<br/>month · day · hour · airline · distance"]
+    C --> D["Temporal & cause analysis"]
+    C --> E["Airport & correlation analysis"]
+    C --> F["Classification<br/>Logistic Regression · Decision Tree<br/>80 / 20 split"]
+    D --> G["Figures & findings"]
+    E --> G
+    F --> G
+```
+
+- **Clean** — the 3M-row sample is stripped of cancelled/diverted flights, with a binary label at the 15-minute threshold.
+- **Analyse** — year/season/hour trends, delay-cause breakdown, and the 20 most-delayed airports.
+- **Model** — class-weighted Logistic Regression and Decision Tree on an 80/20 split.
 
 ## Methods
 
@@ -95,8 +113,8 @@ The CSV is not committed to this repo (614 MB). Download it from Kaggle and plac
 ## Reproduce
 
 ```bash
-git clone https://github.com/nikhilvarmakandula/ba-flight-delay-analysis
-cd ba-flight-delay-analysis
+git clone https://github.com/kandulanikhilvarma/flight-delay-analysis
+cd flight-delay-analysis
 
 pip install -r requirements.txt
 
@@ -106,9 +124,32 @@ jupyter notebook flight_delay_analysis.ipynb
 ```
 ---
 
+## Data & Attribution
+
+The underlying on-time performance data is published by the U.S. **Bureau of
+Transportation Statistics** (U.S. Department of Transportation) and, as a work of
+the U.S. federal government, is in the **public domain**. The packaged 3M-row
+sample used here was redistributed on Kaggle by *patrickzel*.
+
+Analysis code and figures in this repository are released under the MIT License
+(see [LICENSE](LICENSE)); the source data remains under its original terms.
+
+---
+
 ## References
 
 - Bureau of Transportation Statistics (2024). *Airline On-Time Performance Data*. U.S. Department of Transportation. https://www.transtats.bts.gov/
 - Patrickzel (2023). *Flight Delay and Cancellation Dataset (2019–2023)*. Kaggle. https://www.kaggle.com/datasets/patrickzel/flight-delay-and-cancellation-dataset-2019-2023
 - Federal Aviation Administration (2024). *Air Traffic By The Numbers*. https://www.faa.gov/air_traffic/by_the_numbers
 - Airlines for America (2024). *Annual Results: U.S. Airlines*. https://www.airlines.org/dataset/annual-results-u-s-airlines/
+
+---
+
+## License
+
+Released under the MIT License — see [LICENSE](LICENSE). The source flight data remains under its original terms (see **Data & Attribution** above).
+
+---
+
+**Nikhilvarma Kandula** — Data Science · NLP · Statistical Analysis  
+[LinkedIn](https://www.linkedin.com/in/nikhilvarmakandula) · [Email](mailto:kandulanikhilvarma@gmail.com) · [Portfolio](https://kandula.studio)
