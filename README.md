@@ -2,7 +2,7 @@
 
 Predictive analytics on 3 million BTS flight records to identify what drives U.S. domestic delays and whether delay likelihood can be predicted from pre-flight schedule data alone.
 
-![Python](https://img.shields.io/badge/Python-3.10-blue) ![Platform](https://img.shields.io/badge/Platform-Kaggle%20%7C%20Local-lightgrey) ![License](https://img.shields.io/badge/License-Academic-green)
+![Python](https://img.shields.io/badge/Python-3.10-blue) ![Platform](https://img.shields.io/badge/Platform-Kaggle%20%7C%20Local-lightgrey) [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
 
 ---
 
@@ -142,3 +142,14 @@ Analysis code and figures in this repository are released under the MIT License
 - Patrickzel (2023). *Flight Delay and Cancellation Dataset (2019–2023)*. Kaggle. https://www.kaggle.com/datasets/patrickzel/flight-delay-and-cancellation-dataset-2019-2023
 - Federal Aviation Administration (2024). *Air Traffic By The Numbers*. https://www.faa.gov/air_traffic/by_the_numbers
 - Airlines for America (2024). *Annual Results: U.S. Airlines*. https://www.airlines.org/dataset/annual-results-u-s-airlines/
+
+---
+
+## License
+
+Released under the MIT License — see [LICENSE](LICENSE). The source flight data remains under its original terms (see **Data & Attribution** above).
+
+---
+
+**Nikhilvarma Kandula** — Data Science · NLP · Statistical Analysis  
+[LinkedIn](https://www.linkedin.com/in/nikhilvarmakandula) · [Email](mailto:kandulanikhilvarma@gmail.com) · [Portfolio](https://kandula.studio)
